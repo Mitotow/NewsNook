@@ -1,0 +1,20 @@
+/* Colors */
+$color1: #6A6873;
+$color2: #9998A6;
+$color3: #C5C8D9;
+$color4: #F0F0F2;
+$color5: #0D0D0D;
+
+/* Default values */ 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+#root {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}

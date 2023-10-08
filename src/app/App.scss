@@ -1,0 +1,19 @@
+@import '../index.scss';
+
+main {
+    margin-top: 70px;
+    width: 100%;
+    height: calc(100% - 70px);
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: $color4;
+
+    p {
+        max-width: 33vw;
+    }
+}
