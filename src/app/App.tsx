@@ -2,12 +2,17 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
-
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
 import Nav from './components/Nav/Nav';
 import NavElement from '../interfaces/NavElement';
 import './App.scss'
 import Home from "./pages/Home/Home";
 import Nytimes from "./pages/NYTimes/NYtimes";
+
+const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -27,7 +32,7 @@ function App() {
       href: "/"
     },
     {
-      name: "NYTimes",
+      name: "NewYorkTimes",
       href: "/nytimes"
     }
   ]
@@ -35,7 +40,9 @@ function App() {
   return (
     <>
       <Nav elements={elements}/>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </>
   );
 }
